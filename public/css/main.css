@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  color: #232323;
+  background-color: #FAFAFA;
+}
+
+svg {
+  height: 400px;
+  width: 250px;
+}
+
+#face-container {
+  display: flex;
+  justify-content: center;
+}
+
+
+#typing-container {
+  text-align: center;
+}
+
+#name {
+  font-size: 65px;
+  line-height: 65px;
+}
+
+#role {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+#underline-1, #underline-2 {
+  animation: blink .5s infinite;
+}
+
+#underline-2 {
+  display: none;
+}
+
+@keyframes blink {
+  0%   { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/*MEDIA QUERIES*/
+/* iPhone 5 ----------- */
+@media only screen
+and (min-device-width: 320px)
+and (max-device-height: 568px)
+and (orientation : portrait)
+and (-webkit-device-pixel-ratio: 2){
+  svg {
+    height: 900px;
+    width: 600px;
+  }
+
+  #typing-container {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #name {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  #role {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-height: 568px)
+and (orientation : landscape)
+and (-webkit-device-pixel-ratio: 2){
+  svg {
+    height: 200px;
+    width: 100px;
+  }
+
+  #typing-container {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #name {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  #role {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+/* iPhone 6 ----------- */
+@media only screen
+and (min-device-width: 375px)
+and (max-device-height: 667px)
+and (orientation : portrait)
+and (-webkit-device-pixel-ratio: 2){
+  svg {
+    height: 900px;
+    width: 600px;
+  }
+
+  #typing-container {
+    font-size: 60px;
+    text-align: center;
+  }
+
+  #name {
+    font-size: 120px;
+    line-height: 120px;
+  }
+
+  #role {
+    font-size: 70px;
+    line-height: 70px;
+  }
+}
+
+@media only screen
+and (min-device-width: 375px)
+and (max-device-height: 667px) 
+and (orientation : landscape) 
+and (-webkit-device-pixel-ratio: 2){
+  svg {
+    height: 900px;
+    width: 600px;
+  }
+
+  #typing-container {
+    font-size: 60px;
+    text-align: center;
+  }
+}
