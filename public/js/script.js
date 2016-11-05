@@ -63,7 +63,7 @@
     }
   }
   
-  faceDrop(face);
+  faceDrop(face, faceSVG);
   generateName(name);
   generateRole(role);
   setTimeout(typeName.bind(null, 0), 2000);
