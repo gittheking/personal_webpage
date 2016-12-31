@@ -115,8 +115,8 @@ and (max-device-height: 568px)
 and (orientation : portrait)
 and (-webkit-device-pixel-ratio: 2){
   svg {
-    height: 900px;
-    width: 600px;
+    height: 300px;
+    width: 200px;
   }
 
   #typing-container {
@@ -125,13 +125,13 @@ and (-webkit-device-pixel-ratio: 2){
   }
 
   #name {
-    font-size: 120px;
-    line-height: 120px;
+    font-size: 50px;
+    line-height: 50px;
   }
 
   #role {
-    font-size: 70px;
-    line-height: 70px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
