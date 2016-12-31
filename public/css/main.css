@@ -11,6 +11,30 @@ svg {
   width: 250px;
 }
 
+nav {
+  bottom: 0;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  z-index: 2000;
+}
+
+nav img {
+  color: #fafafa;
+  height: 10vh;
+  margin: 0 15px 15px 15px;
+  width: 100px;
+}
+
+.icon-stroke {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-name: drawFace;
+  stroke-dasharray: 2500;
+}
+
 .face-partial {
   animation-duration: 4s;
   animation-fill-mode: forwards;
