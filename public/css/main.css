@@ -7,9 +7,15 @@ body {
 }
 
 svg {
-  display: none;
   height: 400px;
   width: 250px;
+}
+
+.face-partial {
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  animation-name: drawFace;
+  stroke-dasharray: 2500;
 }
 
 #face-container {
@@ -40,17 +46,21 @@ svg {
   display: none;
 }
 
-#about-container {
-  background-color: #FAFAFA;
-  box-shadow: 0 -3px 10px #222;
+@-webkit-keyframes drawFace {
+  0% {
+    fill: #FAFAFA;
+    stroke-dashoffset: 2500;
+  }
+  50% {
+    fill: #FAFAFA;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #232323;
+  }
 }
 
-#interests-container {
-  background-color: #FAFAFA;
-  box-shadow: 0 -3px 10px #222;
-}
-
-@keyframes blink {
+@-webkit-keyframes blink {
   0%   { opacity: 1; }
   100% { opacity: 0; }
 }

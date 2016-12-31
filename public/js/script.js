@@ -1,38 +1,8 @@
 'use strict';
 
 (() => {
-  const faceSVG = document.querySelector('#face');
-  const face    = Snap('#face');
-  const name    = 'BOBBY KING';
-  const role    = 'FULL STACK WEB DEVELOPER';
-  const windowHeight = window.innerHeight;
-  const windowWidth = window.innerWidth;
-  const about = document.querySelector('#about-container');
-
-  function sizeCards() {
-    document.querySelectorAll('.container').forEach((container, i) => {
-      const containerStyle = `height: ${windowHeight}px; width: ${windowWidth}px; position: ${i !== 0 ? 'absolute' : 'fixed'}; top: ${windowHeight * i}px`;
-      container.setAttribute('style', containerStyle);
-    });
-  }
-
-  function faceDrop(svg, svgElement) {
-    svgElement.style.display = 'block';
-    svg.selectAll('g').forEach((path, i) => {
-      path.transform('t 0 -1500');
-      path.animate({
-        transform: 't 0 0',
-      }, 1000 * (1 + (i + 1) / 100));
-    });
-  }
-
-  function faceRise(svg) {
-    svg.selectAll('g').forEach((path, i) => {
-      path.animate({
-        transform: 't 0 -1500',
-      }, 1500 * (1  +  (i + 1) / 10));
-    });
-  }
+  const name = 'BOBBY KING';
+  const role = 'FULL STACK WEB DEVELOPER';
 
   function generateName(nameStr) {
     let htmlStr = '';
@@ -72,33 +42,7 @@
     }
   }
 
-  document.addEventListener('scroll', (event) => {
-    // First attempt
-    // document.querySelectorAll('.container').forEach((container, i) => {
-    //   if (parseInt(container.style.top) <= document.body.scrollTop && i === 1 && ) {
-    //     container.setAttribute('style', `height: ${windowHeight}px; position: fixed; top: 0px; width: ${windowWidth}px;`);
-    //     console.log('got it');
-    //   } else if (i === 1) {
-    //     // container.setAttribute('style', `height: ${windowHeight}px; position: absolute; width: ${windowWidth}px;`);
-    //   }
-    //   if (i === 2) {
-    //     console.log(container.style.top);
-    //     console.log(document.body.scrollTop);
-    //   }
-    // });
-    
-    // Second attempt
-    if (parseInt(about.style.top) <= document.body.scrollTop && about.style.position === 'absolute') {
-      about.setAttribute('style', `height: ${windowHeight}px; position: fixed; top: 0px; width: ${windowWidth}px;`);
-    } else if (document.body.scrollTop <= windowHeight && about.style.position === 'fixed') {
-      about.setAttribute('style', `height: ${windowHeight}px; position: absolute; top: 0px; width: ${windowWidth}px;`);
-      console.log('got it');
-    }
-  });
-
-  sizeCards();
-  faceDrop(face, faceSVG);
   generateName(name);
   generateRole(role);
-  setTimeout(typeName.bind(null, 0), 2000);
+  setTimeout(typeName.bind(null, 0), 2500);
 })();
