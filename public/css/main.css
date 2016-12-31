@@ -21,7 +21,7 @@ nav {
   z-index: 2000;
 }
 
-nav img {
+nav svg {
   color: #fafafa;
   height: 10vh;
   margin: 0 15px 15px 15px;
@@ -29,10 +29,10 @@ nav img {
 }
 
 .icon-stroke {
-  animation-duration: 4s;
+  animation-duration: 8s;
   animation-fill-mode: forwards;
-  animation-name: drawFace;
-  stroke-dasharray: 2500;
+  animation-name: drawIcons;
+  stroke-dasharray: 100;
 }
 
 .face-partial {
@@ -76,6 +76,24 @@ nav img {
     stroke-dashoffset: 2500;
   }
   50% {
+    fill: #FAFAFA;
+    stroke-dashoffset: 0;
+  }
+  100% {
+    fill: #232323;
+  }
+}
+
+@-webkit-keyframes drawIcons {
+  0% {
+    fill: #FAFAFA;
+    stroke-dashoffset: 100;
+  }
+  65% {
+    fill: #FAFAFA;
+    stroke-dashoffset: 100;
+  }
+  85% {
     fill: #FAFAFA;
     stroke-dashoffset: 0;
   }
